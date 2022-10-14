@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-parcelize'
     id 'com.google.secrets_gradle_plugin' version '0.4'
 }
 
@@ -25,7 +26,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField 'String', "ApiKey", API_KEY
-        //resValue 'string', "api_key", API_KEY
     }
 
     buildTypes {
@@ -58,9 +58,15 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
 
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+
     //Navigation component
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.2")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.2")
+
+    //paging3
+    implementation("androidx.paging:paging-runtime:3.1.1")
 
     // Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt'
@@ -76,6 +82,12 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
+
+    //Coil
+    implementation("io.coil-kt:coil:2.2.1")
+
+    //test retrofit
+    testImplementation "org.mockito:mockito-core:4.0.0"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

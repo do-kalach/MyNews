@@ -1,5 +1,7 @@
 package com.example.domain.news.entitie
 
+import java.io.Serializable
+
 data class News(
     val author: String?,
     val content: String,
@@ -9,4 +11,4 @@ data class News(
     val title: String,
     val url: String,
     val urlToImage: String?
-)
+):Serializable

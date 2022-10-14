@@ -9,7 +9,7 @@ interface NewsApi {
 
     @GET("everything")
     suspend fun fetchNews(
-        @Query("q") query: String,
+        @Query("q") query: String?,
         @Query("from") from: String? = null,
         @Query("to") to: String? = null,
         @Query("sortBy") sortBy: String = "publishedAt",

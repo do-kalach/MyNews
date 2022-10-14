@@ -25,12 +25,16 @@ class CalendarPicker {
             .build()
 
         datePicker.addOnPositiveButtonClickListener { date ->
-            val first = SimpleDateFormat("yyyy-MM-dd").format(Date(date.first))
-            val second = SimpleDateFormat("yyyy-MM-dd").format(Date(date.second))
+            val first = date.first.toDateString()
+            val second = date.second.toDateString()
             getRangeDate(Pair(first, second))
         }
 
         datePicker.show(fragmentManager, tag)
     }
 
+}
+
+fun Long.toDateString(dateFormat: String = "yyyy-MM-dd"): String {
+    return SimpleDateFormat(dateFormat).format(Date(this))
 }

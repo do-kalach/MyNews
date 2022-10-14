@@ -1,17 +1,9 @@
 package com.example.domain.data
 
-enum class SortBy {
-    RELEVANCY,
-    POPULARITY,
-    PUBLISHEDAT;
+enum class SortBy(private val sortName: String) {
+    RELEVANCY("relevancy"),
+    POPULARITY("popularity"),
+    PUBLISHEDAT("publishedAt");
 
-    companion object {
-        fun getSort(sortBy: SortBy): String {
-            return when (sortBy) {
-                RELEVANCY -> "relevancy"
-                POPULARITY -> "popularity"
-                PUBLISHEDAT -> "publishedAt"
-            }
-        }
-    }
+    fun getSort(): String = this.sortName
 }

@@ -1,25 +1,13 @@
 package com.example.domain.data
 
-enum class Category {
-    BUISINESS,
-    ENTERTAINMENT,
-    GENERAL,
-    HEALTH,
-    SCIENCE,
-    SPORTS,
-    TECHNOLOGY;
+enum class Category(private val nameCategory: String) {
+    BUISINESS("business"),
+    ENTERTAINMENT("entertainment"),
+    GENERAL("general"),
+    HEALTH("health"),
+    SCIENCE("science"),
+    SPORTS("sports"),
+    TECHNOLOGY("technology");
 
-    companion object {
-        fun getCategory(category: Category): String {
-            return when (category) {
-                BUISINESS -> "business"
-                ENTERTAINMENT -> "entertainment"
-                GENERAL -> "general"
-                HEALTH -> "health"
-                SCIENCE -> "science"
-                SPORTS -> "sports"
-                TECHNOLOGY -> "technology"
-            }
-        }
-    }
+    fun getCategory(): String = this.nameCategory
 }

@@ -12,10 +12,10 @@ class GetTopNewsUseCase(private val newsRepository: NewsRepository) {
         category: Category
     ): List<TopNews> {
 
-        val category = Category.getCategory(category)
+        val categoryName = category.getCategory()
 
-        val country = Country.getCountry(country)
+        val countryName = country.getLanguage()
 
-        return newsRepository.fetchTopNews(query, country, category)
+        return newsRepository.fetchTopNews(query, countryName, categoryName)
     }
 }

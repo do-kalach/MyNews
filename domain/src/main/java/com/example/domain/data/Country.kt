@@ -1,17 +1,9 @@
 package com.example.domain.data
 
-enum class Country {
-    RU,
-    US,
-    UA;
+enum class Country(private val language: String) {
+    RU("ru"),
+    DE("de"),
+    UA("ua");
 
-    companion object {
-        fun getCountry(country: Country): String {
-            return when (country) {
-                RU -> "ru"
-                US -> "us"
-                UA -> "ua"
-            }
-        }
-    }
+    fun getLanguage(): String = this.language
 }

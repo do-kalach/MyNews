@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="countrysCodes">
+        <item>gb</item>
+        <item>de</item>
+        <item>ru</item>
+    </string-array>
+
+    <integer-array name="countrysIcons">
+        <item>@drawable/ic_united_kingdom</item>
+        <item>@drawable/ic_germany</item>
+        <item>@drawable/ic_russia</item>
+    </integer-array>
+
+    <string-array name="countrys">
+        <item>United Kingdom</item>
+        <item>Germany</item>
+        <item>Russia</item>
+    </string-array>
+
+    <integer-array name="menuDrawable">
+        <item>@drawable/ic_business</item>
+        <item>@drawable/ic_entertainment</item>
+        <item>@drawable/ic_business</item>
+        <item>@drawable/ic_health</item>
+        <item>@drawable/ic_science</item>
+        <item>@drawable/ic_sports</item>
+        <item>@drawable/ic_technology</item>
+    </integer-array>
+
+    <array name="colorsDrawable">
+        <item>@color/light_blue_400</item>
+        <item>@color/pink_300</item>
+        <item>@color/light_blue_400</item>
+        <item>@color/green_300</item>
+        <item>@color/purple_300</item>
+        <item>@color/red_300</item>
+        <item>@color/orange_300</item>
+    </array>
+
+</resources>

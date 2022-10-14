@@ -6,7 +6,7 @@ import com.example.domain.topnews.entitie.TopNews
 interface NewsRepository {
 
     suspend fun fetchNews(
-        query: String,
+        query: String?,
         from: String?,
         to: String?,
         sortBy: String,

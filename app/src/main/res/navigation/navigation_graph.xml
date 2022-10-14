@@ -9,5 +9,22 @@
         android:id="@+id/newsFragment"
         android:name="com.example.mynews.ui.newsfragment.NewsFragment"
         android:label="News"
-        tools:layout="@layout/fragment_news" />
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_newsFragment_to_detailsNewsFragment"
+            app:destination="@id/detailsNewsFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/detailsNewsFragment"
+        android:name="com.example.mynews.ui.newsfragment.DetailsNewsFragment"
+        android:label="DetailsNewsFragment" >
+        <argument
+            android:name="news"
+            app:argType="com.example.domain.news.entitie.News" />
+    </dialog>
+    <fragment
+        android:id="@+id/topNewsFragment"
+        android:name="com.example.mynews.ui.topnewsfragment.TopNewsFragment"
+        android:label="fragment_top_news"
+        tools:layout="@layout/fragment_top_news" />
 </navigation>

@@ -10,7 +10,7 @@ import com.example.domain.topnews.entitie.TopNews
 class NewsRepositoryImpl(private val newsApi: NewsApi) : NewsRepository {
 
     override suspend fun fetchNews(
-        query: String,
+        query: String?,
         from: String?,
         to: String?,
         sortBy: String,
